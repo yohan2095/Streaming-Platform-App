@@ -1,4 +1,3 @@
-const { resolve } = require('path/posix')
 const SubscriptionModel = require('./subscriptionsModel')
 
 //GET ALL Subscriptions
