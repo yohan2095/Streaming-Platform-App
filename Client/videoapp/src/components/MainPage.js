@@ -4,10 +4,11 @@ import MenuComp from "./menu";
 
 
 function MainPageComp() {
+  
 
   return (
     <div className="App">
-      <h3>Movies - Subscription Web Site</h3>
+      <h1>Movies - Subscription Web Site</h1>
 
       <Switch>
           <Route exact path="/">

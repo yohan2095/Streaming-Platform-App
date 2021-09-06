@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
 
@@ -14,7 +14,7 @@ function LoginComp() {
         console.log(resp.data);
         sessionStorage.setItem("fullname", resp.data);
         console.log(sessionStorage.getItem("fullname"));
-        if(sessionStorage.getItem("fullname") == "Unauthorized")
+        if(sessionStorage.getItem("fullname") === "Unauthorized")
         {
           alert("Username or Password is wrong")
         }
