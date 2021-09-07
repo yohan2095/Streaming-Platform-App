@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 function MenuComp() {
 
     const history = useHistory();
-    const [page, setPage] = useState("movies")
+    const [page, setPage] = useState("movies");
     
     const username = sessionStorage.getItem("fullname");
 
@@ -24,7 +24,7 @@ function MenuComp() {
             <button onClick={() => setPage("movies")}>Movies</button>
             <button onClick={() => setPage("subscriptions")}>Subscriptions</button>
             <button onClick={() => setPage("usermanagement")}>User Management</button>
-            <button onClick={logOut} style={{backgroundColor : "red"}}>Log Out</button>
+            <button onClick={logOut} style={{backgroundColor : "black"}}>Log Out</button>
 
             
 
