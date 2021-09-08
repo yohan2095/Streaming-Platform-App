@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
-import mvsrv from '../services/moviesService';
 import EditMovieComp from "./editMovie";
+import mvsrv from '../../services/moviesService';
 
 function MovieComp(props) {
 
@@ -26,7 +26,7 @@ function MovieComp(props) {
   return (
     <div>
     <div className="App">
-      <div className="App" style={{ borderStyle : "solid" , borderColor : "red" , borderWidth : "4px" }}>
+      <div className="App" style={{ borderStyle : "solid" , borderColor : "MidnightBlue" , borderWidth : "5px" }}>
         <h2><Link to={"/movie/" + movie._id} >{movie.name}, {movie.premiered}</Link> </h2>
         <h4>Genres : {movie.genres}</h4>
 
@@ -35,7 +35,7 @@ function MovieComp(props) {
         <button onClick={() => setPage("editMovie")}>Edit</button>
         <button onClick={deleteMovie}>Delete</button>
 
-        {page === "editMovie" && <EditMovieComp />}
+        {page === "editMovie" && <EditMovieComp movieid={movie._id} key={movie._id} />}
       </div>
     </div>
     <br/>

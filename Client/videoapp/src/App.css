@@ -39,19 +39,9 @@
 
 button
 {
-  background-color: red;
-  color: white;
+  background-color: Aqua;
+  color: MidnightBlue;
 }
 
-#movieBlock{
-  
-  width : 300px;
-  border-style : solid;
-  border-color : red;
-  border-width : 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 
