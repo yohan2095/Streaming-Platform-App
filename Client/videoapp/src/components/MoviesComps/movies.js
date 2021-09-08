@@ -8,7 +8,7 @@ function MoviesComp() {
     
     const [page, setPage] = useState("movies");
 
-    const [movies, setMovies] = useState([])
+    const [movies, setMovies] = useState([]);
 
     useEffect(async () =>
     {
@@ -39,9 +39,7 @@ function MoviesComp() {
         {
             sessionStorage.setItem("foundMID", "No Result");
             alert("No Result");
-        }
-
-        
+        }  
     }
 
     return (

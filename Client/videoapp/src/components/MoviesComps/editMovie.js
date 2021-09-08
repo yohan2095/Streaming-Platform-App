@@ -9,7 +9,7 @@ function EditMovieComp(props) {
         window.location.reload();
     }
   
-    const [movie, setMovie] = useState({name : '',genres : '', premiered : '', image : ''})
+    const [movie, setMovie] = useState({name : '', genres : '', premiered : '', image : ''})
  
     useEffect(async () =>
     {

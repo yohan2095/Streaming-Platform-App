@@ -39,11 +39,12 @@ const getMember = (id) =>
 }
 
 //POST a Member
-const createMember = (id,obj) =>
+const createMember = (obj) =>
 {
     return new Promise((resolve,reject) =>
     {
         let mem = new MemberModel({
+            name : obj.name,
             email : obj.email,
             city : obj.city
         })
@@ -65,10 +66,11 @@ const createMember = (id,obj) =>
 //PUT a Member
 const updateMember = (id,obj) =>
 {
-    return new Promise((resovle,reject) =>
+    return new Promise((resolve,reject) =>
     {
         MemberModel.findByIdAndUpdate(id,
             {
+                name : obj.name,
                 email : obj.email,
                 city : obj.city
             }, function(err)

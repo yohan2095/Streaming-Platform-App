@@ -13,6 +13,7 @@ function AddMovieComp() {
             if(movie.name != "")
             {
               let status = await axios.post("http://localhost:8000/api/movies/", movie);
+              console.log(status);
               window.location.reload();
             }
         }

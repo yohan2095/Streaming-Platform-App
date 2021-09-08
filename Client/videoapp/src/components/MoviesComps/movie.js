@@ -33,7 +33,7 @@ function MovieComp(props) {
         <img src={movie.image} /> <br></br>
 
         <button onClick={() => setPage("editMovie")}>Edit</button>
-        <button onClick={deleteMovie}>Delete</button>
+        <button onClick={deleteMovie} style={{backgroundColor : "MidnightBlue", color : "white"}} >Delete</button>
 
         {page === "editMovie" && <EditMovieComp movieid={movie._id} key={movie._id} />}
       </div>
