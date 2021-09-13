@@ -11,7 +11,7 @@ router.route('/').get(async function(req,resp)
 })
 
 //GET Subscription by ID
-router.route("/:id").get(async function(req,resp)
+router.route('/:id').get(async function(req,resp)
 {
     let data = await subscriptionsBL.getSubscription(req.params.id);
     return resp.json(data)
@@ -20,7 +20,7 @@ router.route("/:id").get(async function(req,resp)
 //POST a Subscription
 router.route("/").post(async function(req,resp)
 {
-    let sttus = await subscriptionsBL.createSubscription(req.body);
+    let status = await subscriptionsBL.createSubscription(req.body);
     return resp.json(status)
 })
 

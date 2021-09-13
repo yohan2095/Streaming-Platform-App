@@ -3,7 +3,7 @@ import AddMemberComp from './addMember';
 import MemberComp from './member';
 import mbsrv from '../../services/membersService';
 
-function SubscriptionsComp() {
+function MembersComp() {
 
     const [page, setPage] = useState("members");
 
@@ -23,7 +23,7 @@ function SubscriptionsComp() {
             <button onClick={() => setPage("members")}>All Members</button>
             <button onClick={() => setPage("addMember")}>Add a Member</button>
 
-            {page === "subscriptions"}
+            {page === "members"}
             {page === "addMember" && <AddMemberComp />}
 
             <div className="App">
@@ -39,4 +39,4 @@ function SubscriptionsComp() {
     )
 }
 
-export default SubscriptionsComp;
+export default MembersComp;

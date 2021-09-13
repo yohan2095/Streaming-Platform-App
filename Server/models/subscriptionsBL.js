@@ -22,16 +22,19 @@ const getAllSubscriptions = () =>
 //GET Subscription by ID
 const getSubscription = (id) =>
 {
-    SubscriptionModel.findById(id, function(err,data)
+    return new Promise((resolve,reject) =>
     {
-        if(err)
+        SubscriptionModel.findById(id, function(err,data)
         {
-            reject(err)
-        }
-        else
-        {
-            resolve(data)
-        }
+            if(err)
+            {
+                reject(err)
+            }
+            else
+            {
+                resolve(data)
+            }
+        })
     })
 }
 

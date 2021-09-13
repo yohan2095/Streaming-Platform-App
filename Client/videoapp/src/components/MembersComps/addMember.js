@@ -12,10 +12,10 @@ function AddMemberComp() {
             if(member.name !== "")
             {
               let status = await axios.post("http://localhost:8000/api/members/", member);
+              console.log(status)
             }
         }
-    
-    
+        
     const cancel = async () =>
         {
             window.location.reload();

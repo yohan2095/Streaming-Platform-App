@@ -1,6 +1,5 @@
 import MoviesComp from "./MoviesComps/movies";
-import SubscriptionsComp from "./SubscriptionsComps/subscriptions";
-import UserManagementComp from "./usermanagement";
+import MembersComp from "./MembersComps/members";
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 
@@ -16,22 +15,20 @@ function MenuComp() {
         sessionStorage.setItem("fullname", "");
         history.push('/')
     }
+    
     return (
         <div className="App">
             <h5>Hello {username}</h5>
             <h3>Menu</h3>
 
             <button onClick={() => setPage("./MoviesComps/movies")}>Movies</button>
-            <button onClick={() => setPage("./SubscriptionsComps/subscriptions")}>Subscriptions</button>
-            <button onClick={() => setPage("usermanagement")}>User Management</button>
+            <button onClick={() => setPage("./MembersComps/members")}>Subscriptions</button>
             <button onClick={logOut} style={{backgroundColor : "MidnightBlue", color : "white"}}>Log Out</button>
 
-            
-
+        
             <div>
             {page === "./MoviesComps/movies" && <MoviesComp />}
-            {page === "./SubscriptionsComps/subscriptions" && <SubscriptionsComp />}
-            {page === "usermanagement" && <UserManagementComp />}
+            {page === "./MembersComps/members" && <MembersComp />}
             </div>
         </div>
     )
