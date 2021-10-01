@@ -6,4 +6,8 @@ This is my first MERN Stack project which is also for my studies at the Technion
 For this project i have to create a Movie Streaming Platform (Not including any video player). This is a platform with movies references i took from https://www.tvmaze.com/api. As a member you can browse trough all the movies added to the DataBase, subscribe to the one you saw and also delete them.
 You can also modify your own details as a Member. As a 'User' you can delete members, create, delete, and edit Movies. There is a Log-In system included for Users with special allowance.
 
-I will update about it soon...
+The languages i used for this project:
+- HTML
+- JavaScript
+- CSS
+- JSX
